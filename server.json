@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "br.com.9bot/mcp",
+  "title": "9bot",
+  "description": "Manage, automate and analyze WhatsApp groups, communities and channels with 9bot.",
+  "version": "1.0.0",
+  "websiteUrl": "https://9bot.com.br/",
+  "icons": [
+    {
+      "src": "https://mcp.9bot.com.br/favicon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "300x300"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.9bot.com.br/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "marketplaceIcon": "https://mcp.9bot.com.br/favicon.png",
+      "thumbnail": "https://mcp.9bot.com.br/thumbnail.png",
+      "category": [
+        "communication",
+        "productivity",
+        "social-media"
+      ],
+      "authentication": "oauth",
+      "subscriptionRequired": true,
+      "subscriptionUrl": "https://9bot.com.br/en/start-now"
+    }
+  }
+}
