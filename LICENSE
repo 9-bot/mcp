@@ -1,0 +1,22 @@
+9bot Public Integration Files License
+
+Copyright (c) 2026 9bot. All rights reserved.
+
+Permission is granted to view, copy, and use the public metadata, documentation,
+plugin manifests, and skill instructions contained in this repository solely for
+the purpose of discovering, installing, configuring, or interoperating with the
+official 9bot hosted service.
+
+This permission does not grant any license to the source code, infrastructure,
+APIs, backend services, MCP gateway implementation, tenant services, trademarks,
+logos, or other proprietary technology operated by 9bot.
+
+You may not represent a modified or redistributed copy of these files as an
+official 9bot integration without prior written permission.
+
+THESE PUBLIC INTEGRATION FILES ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+The 9bot name, logos, and related marks are trademarks or service marks of their
+respective owner and are not licensed under this notice.
