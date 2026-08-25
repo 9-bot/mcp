@@ -1,3 +1,8 @@
+---
+name: whatsapp-community-management
+description: Manage, automate, analyze, and operate WhatsApp groups, communities, and channels connected to the user's 9bot account. Use for scheduling messages, moderation, member management, analytics, automations, and other supported 9bot MCP operations.
+---
+
 # 9bot WhatsApp Community Management
 
 Use the 9bot MCP server when the user wants to manage, automate, analyze, or operate WhatsApp groups, communities, or channels connected to their 9bot account.

@@ -1,0 +1,24 @@
+{
+    "name":  "9bot",
+    "displayName":  "9bot",
+    "version":  "1.0.0",
+    "description":  "Manage, automate, and analyze WhatsApp groups, communities, and channels through 9bot.",
+    "author":  {
+                   "name":  "9bot"
+               },
+    "publisher":  "9bot",
+    "homepage":  "https://9bot.com.br/en/",
+    "repository":  "https://github.com/9-bot/mcp",
+    "license":  "MIT",
+    "logo":  "assets/logo.svg",
+    "keywords":  [
+                     "whatsapp",
+                     "communities",
+                     "groups",
+                     "automation",
+                     "moderation",
+                     "analytics",
+                     "mcp"
+                 ],
+    "category":  "productivity"
+}
