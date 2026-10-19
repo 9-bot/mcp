@@ -1,0 +1,10 @@
+{
+  "name": "9bot",
+  "version": "1.0.0",
+  "description": "Manage, automate and analyze WhatsApp groups, communities and channels with 9bot.",
+  "mcpServers": {
+    "9bot": {
+      "httpUrl": "https://mcp.9bot.com.br/mcp"
+    }
+  }
+}

@@ -48,6 +48,49 @@ When connecting, users authenticate with the WhatsApp number associated with the
 
 No tenant URL, API key or MCP credential needs to be entered manually when using the universal MCP endpoint.
 
+## Install
+
+The server is remote, so there is nothing to download. Each client signs in through OAuth the first time you use it.
+
+**Claude Code**
+
+```bash
+claude mcp add --transport http 9bot https://mcp.9bot.com.br/mcp
+```
+
+**VS Code**
+
+```bash
+code --add-mcp '{"name":"9bot","type":"http","url":"https://mcp.9bot.com.br/mcp"}'
+```
+
+**Gemini CLI** (this repository is a Gemini CLI extension)
+
+```bash
+gemini extensions install https://github.com/9-bot/mcp
+```
+
+**Cursor and other clients that read an `mcpServers` JSON config**
+
+```json
+{
+  "mcpServers": {
+    "9bot": {
+      "url": "https://mcp.9bot.com.br/mcp"
+    }
+  }
+}
+```
+
+**Authentication:** OAuth 2.1 with PKCE (S256) and dynamic client registration. Scopes: `9bot.read_only` and `9bot.full_access`.
+
+## Plugin manifests in this repository
+
+* `plugin.json` and `mcp.json`: Agent Plugins format (Kiro, VS Code agent plugins, GitHub Copilot)
+* `.cursor-plugin/plugin.json` and `.mcp.json`: Cursor
+* `gemini-extension.json`: Gemini CLI
+* `server.json`: official MCP Registry entry `br.com.9bot/mcp`
+
 ## Requirements
 
 An active **9bot subscription** is required to access the MCP service.
@@ -128,6 +171,13 @@ Never share:
 Please do not disclose security vulnerabilities through public GitHub issues.
 
 For security-related reports, contact 9bot through our official support channels.
+
+## Privacy, Terms and Support
+
+* **Privacy policy:** https://9bot.com.br/en/privacy-policy/
+* **Terms of use:** https://9bot.com.br/en/terms-of-use/
+* **Documentation:** https://9bot.com.br/en/9bot-docs/
+* **Support:** contato@9bot.com.br
 
 ## About 9bot
 
