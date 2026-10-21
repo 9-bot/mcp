@@ -1,0 +1,16 @@
+# Discover tools available to the authorized app (from https://9bot.com.br/api/)
+POST https://mcp.9bot.com.br/mcp
+Authorization: Bearer <access-token>
+Content-Type: application/json
+Accept: application/json, text/event-stream
+
+{"jsonrpc":"2.0","id":"tools-1","method":"tools/list","params":{}}
+
+###
+# Call a discovered tool (use exact name/schema from tools/list)
+POST https://mcp.9bot.com.br/mcp
+Authorization: Bearer <access-token>
+Content-Type: application/json
+Accept: application/json, text/event-stream
+
+{"jsonrpc":"2.0","id":"call-1","method":"tools/call","params":{"name":"<tool-name-from-tools-list>","arguments":{}}}
