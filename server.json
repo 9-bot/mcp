@@ -7,10 +7,10 @@
   "websiteUrl": "https://9bot.com.br/",
   "icons": [
     {
-      "src": "https://mcp.9bot.com.br/favicon.png",
+      "src": "https://raw.githubusercontent.com/9-bot/mcp/main/assets/logo.png",
       "mimeType": "image/png",
       "sizes": [
-        "300x300"
+        "400x400"
       ]
     }
   ],
