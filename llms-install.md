@@ -8,6 +8,8 @@ Use this file when an agent such as Cline installs 9bot from a marketplace or fr
 
 This repository is documentation and client metadata. Do not clone it to build, npm install, dockerize, or start a local MCP process. Do not add a stdio command, `npx`, `uvx`, or another local wrapper.
 
+The server manages regular WhatsApp groups, announcement groups, and channels. Do not invent tool names for those. After authorization, use `tools/list` and call only the tools returned there.
+
 Configure the hosted endpoint only:
 
 - Name: `9bot`
@@ -22,7 +24,7 @@ Do not put an `Authorization` header, access token, refresh token, client secret
 
 1. An active 9bot subscription. A 7-day free trial is available at https://9bot.com.br/en/start-now. Do not guess a price.
 2. MCP enabled in the 9bot Dashboard at **Settings > MCP**.
-3. An application set to read-only (`9bot.read_only`) or full access (`9bot.full_access`), limited to the groups the user wants this agent to touch.
+3. An application set to read-only (`9bot.read_only`) or full access (`9bot.full_access`), limited to the groups the user wants this agent to touch. Tools for announcement groups and channels are part of the same server. Use only the tools the application is actually given.
 4. A client that can open a browser so the user can approve OAuth 2.1 (PKCE S256).
 
 Ask the user to do the dashboard steps if they have not already. Do not invent a tenant URL. The endpoint above is the universal one.
@@ -85,7 +87,7 @@ Human-readable agent auth steps are published at https://9bot.com.br/auth.md. In
 3. The user signs in to 9bot and approves the requested access. Request only `9bot.read_only` unless the user wants state-changing operations, in which case the application needs `9bot.full_access`.
 4. The client checks that the `iss` parameter on the authorization response is `https://mcp.9bot.com.br`.
 5. The client exchanges the code at the token endpoint, with the PKCE code verifier and the same `resource`. 9bot issues an access token and a refresh token. The client stores both. Renewal uses `grant_type=refresh_token`.
-6. Later MCP requests send `Authorization: Bearer` to `https://mcp.9bot.com.br/mcp`. A successful sign-in does not mean every tool or every group is available. Discover tools with `tools/list` and use the schemas that come back. See `examples/tools-list.http`.
+6. Later MCP requests send `Authorization: Bearer` to `https://mcp.9bot.com.br/mcp`. A successful sign-in does not mean every tool, group, announcement group, or channel is available. Discover tools with `tools/list` and use the schemas that come back. See `examples/tools-list.http`. Do not guess tool names for channels or announcement groups.
 
 If a previously working token returns `401`, drop it and start authorization again. `403` means the token is valid but the scope, group, tool rule, or account does not allow that call.
 
@@ -109,7 +111,7 @@ After the user finishes the browser approval, ask a read-only question, for exam
 Which of my groups are most active this week?
 ```
 
-Use only tools returned for this application. If the list is empty, stop and check the application scope, the authorized groups, and the tool allow and deny lists. Do not send a message, create a Workflow, change moderation, or schedule anything during a setup check unless the user explicitly asks for that action.
+Use only tools returned for this application. If the list is empty, stop and check the application scope, the authorized groups, and the tool allow and deny lists. The same list is where you find tools for announcement groups and channels. Do not send a message, create a Workflow, change moderation, or schedule anything during a setup check unless the user explicitly asks for that action.
 
 For a write the user did ask for, follow 9bot's preview. Sensitive or destructive operations can require a temporary, single-use confirmation submitted a second time. Report the tool result. Do not claim success when the call is waiting for confirmation or still running.
 

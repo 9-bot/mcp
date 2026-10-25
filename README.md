@@ -11,9 +11,9 @@
   <a href="https://registry.modelcontextprotocol.io/?q=br.com.9bot%2Fmcp"><img src="https://img.shields.io/badge/MCP%20Registry-br.com.9bot%2Fmcp-blue" alt="MCP Registry: br.com.9bot/mcp"></a>
 </p>
 
-Install it in Claude, ChatGPT, Gemini, Copilot, Cursor, VS Code, or LM Studio, and operate the WhatsApp groups connected to your 9bot account by talking to the AI.
+Install it in Claude, ChatGPT, Gemini, Copilot, Cursor, VS Code, or LM Studio, and operate the WhatsApp groups, announcement groups, and channels connected to your 9bot account by talking to the AI.
 
-9bot is a paid product for managing WhatsApp groups and communities. This repository is the public documentation and install metadata for the hosted MCP server. The server itself is not distributed here.
+9bot is a paid product for managing WhatsApp groups, announcement groups, and channels. This repository is the public documentation and install metadata for the hosted MCP server. The server itself is not distributed here.
 
 > 9bot is an independent company and is not affiliated with, endorsed by, or sponsored by Meta Platforms or WhatsApp. WhatsApp is a trademark of its owner.
 
@@ -24,12 +24,12 @@ Install it in Claude, ChatGPT, Gemini, Copilot, Cursor, VS Code, or LM Studio, a
 
 ## What you can do
 
-After you sign in, the agent can use the 9bot tools your application is allowed to call. Availability depends on the scopes, groups, and tool rules for that application.
+After you sign in, the agent can use the 9bot tools your application is allowed to call. That includes regular groups, announcement groups, and channels. Availability depends on the scopes, groups, and tool rules for that application.
 
-- Look up groups, members, administrators, settings, and community information.
+- Look up groups, announcement groups, channels, members, administrators, settings, and community information.
 - Generate reports on activity, engagement, and behavior.
 - Turn a request into a Workflow inside 9bot.
-- Send messages through authorized groups.
+- Send messages through authorized groups, announcement groups, and channels.
 - Schedule one-time or recurring communications.
 - Query and operate existing automations and commands.
 - Work with reports, strikes, penalties, allowlists, and other moderation features.
@@ -38,6 +38,7 @@ After you sign in, the agent can use the 9bot tools your application is allowed 
 These prompts are starting points from the [9bot MCP guide](https://9bot.com.br/en/mcp/). Change the group, time, and content to match your account.
 
 - Which of my groups are most active this week?
+- List my announcement groups and channels.
 - List this group's administrators.
 - Which groups grew the most over the last 30 days?
 - List the most active members.
@@ -229,7 +230,7 @@ You decide what the agent can see and change. The controls below are the ones de
 
 **Scopes, including read-only and full access.** Each application is created as read-only or full access. The scope values are `9bot.read_only` and `9bot.full_access`. Scope-based permissions limit which actions that application can perform. Use read-only when the agent only needs to look things up. Use full access when it needs to make changes. Either mode is still limited by the groups, tool rules, confirmation, and sensitive-data policy on that application.
 
-**Groups.** Choose which groups each application can access. 9bot applies that selection when it discovers and runs tools.
+**Groups.** Choose which groups each application can access. 9bot applies that selection when it discovers and runs tools. The server also has tools for announcement groups and channels. Which of those tools an application can call still depends on its scopes and rules.
 
 **Tool allow and deny lists.** Each application can allow or block specific tools.
 
@@ -251,7 +252,7 @@ Report security issues to [contato@9bot.com.br](mailto:contato@9bot.com.br), not
 
 ## Toolsets
 
-Published toolsets, as listed on the [9bot MCP page](https://9bot.com.br/en/mcp/). A given application only receives the tools its scopes, groups, and rules allow.
+Published toolsets, as listed on the [9bot MCP page](https://9bot.com.br/en/mcp/). A given application only receives the tools its scopes, groups, and rules allow. Announcement groups and channels are part of what the server can manage. The table does not add a separate count for them, because those counts are not published as their own rows.
 
 | Toolset | Tools | Purpose |
 | --- | ---: | --- |

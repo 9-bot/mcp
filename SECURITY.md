@@ -8,7 +8,7 @@ For security-related reports, please contact the 9bot team through our official 
 
 ## Authentication
 
-The 9bot MCP uses OAuth 2.0 authentication.
+The 9bot MCP uses OAuth 2.1 (PKCE S256) authentication.
 
 Never share access tokens, refresh tokens, verification codes or other credentials in GitHub issues.
 
