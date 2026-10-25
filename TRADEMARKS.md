@@ -5,6 +5,12 @@ icons, and other brand elements associated with 9bot are trademarks,
 service marks, trade names, or brand assets of 9bot and/or their respective
 owners.
 
+## WhatsApp and Meta Platforms
+
+9bot is an independent company and is not affiliated with, endorsed by, or sponsored by Meta Platforms or WhatsApp. WhatsApp is a trademark of its owner.
+
+Factual references to WhatsApp groups, communities, or channels that a customer connects to their own 9bot account are descriptions of interoperability. They do not mean that Meta Platforms or WhatsApp sponsors, endorses, certifies, or is affiliated with 9bot.
+
 ## Relationship with the MIT License
 
 The source code and documentation in this repository are made available under
